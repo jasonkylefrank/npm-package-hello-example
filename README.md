@@ -30,13 +30,13 @@ The `.` in this command just means the current location.
 
 ## How to create your own package from scratch
 
-#### Overview
+### Overview
 The main structure of the package is as follows:
 1. A `package.json` which has a `bin` property which specifies that this package will be an executable program
 2. A `lib/index.js` file which provides the **main implementation** of the program
 3. A `bin/hello-world.bin.js` file which provides the **interface** to users of the program. It gets called when the user runs the program. It parses the command-line arguments and calls a function from the main implementation file (`lib/index.js`) to do the main work.
 
-#### Create a `package.json`
+### Create a `package.json`
 First create a `package.json` file for npm. This is how we can tell npm that our package will be an executable.  It will also automatically install them to a user’s PATH (which enables them to call the program from anywhere on their file system).
 
 You can create your `package.json` file either manually or by running `npm init` and answering the questions that it asks.
@@ -52,7 +52,7 @@ The you'll need to add a `bin` entry at the end of it like this:
 ```
 The `hello-world` will be the name of the executable program that will be installed on users' machines.  The `./bin/hello-world.bin.js` refers to the interface file for the program.  We'll create that next.
 
-#### Create the interface file
+### Create the interface file
 Since we specified `./bin/hello-world.bin.js` as our interface file, we need to create a `bin` directory in the root of our package, and create the `hello-world.bin.js` file.
 
 One of the keys to this file is the first line where we specify: `#!/usr/bin/env node`.  This is part of what allows npm to generate an executable for this package.
@@ -89,7 +89,7 @@ if (process.argv.length < 3) {
 }
 ```
 
-#### Create the main implementation file
+### Create the main implementation file
 The last main step is the implement the main work file.  In this case its just a simple hello-world script, but it could obviously be much more complicated.
 
 Create an `index.js` file in a `lib` folder in the root of your package.
@@ -104,7 +104,7 @@ const hello = (name) => {
 exports.hello = hello;
 ```
 
-#### Optional: Add a `preferGlobal` property to `package.json`
+### Optional: Add a `preferGlobal` property to `package.json`
 You can add the `preferGlobal` flag to `package.json` if you want npm to issue a warning to the user if they try to install the package locally.  It will not prevent them from doing so, but can be a nice guidance to them.
 
 ```
