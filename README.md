@@ -1,6 +1,6 @@
 # npm-package-hello-example
 
-This is an example of how to create an executable NPM package which can be installed globally on a user's machine.  This means that after a user installs it, they can call the program on their command-line from **any location** on the their filesystem like this:
+This is an example of how to create an **executable** NPM package which can be installed globally on a user's machine.  This means that after a user installs it, they can call the program on their command-line from **any location** on the their filesystem like this:
 
 ```
 > hello-world
