@@ -119,5 +119,5 @@ You can add the `preferGlobal` flag to `package.json` if you want npm to issue a
 I read through [this](http://markmarkoh.com/nodejs-npm-and-executables/) and [this](https://ourcodeworld.com/articles/read/393/how-to-create-a-global-module-for-node-js-properly) and extracted things from both to figure out how to do this. 
 
 #### More robust command-line argument parsing
-To parse more complex command-line arguments, I think [this library](https://github.com/75lb/command-line-args/) may be worth a look.
+To parse more complex command-line arguments, I think 75lb's [command-line-args](https://github.com/75lb/command-line-args/) or TJ's [commander.js](https://github.com/tj/commander.js/) may be worth a look.
 
