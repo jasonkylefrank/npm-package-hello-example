@@ -41,7 +41,7 @@ First create a `package.json` file for npm. This is how we can tell npm that our
 
 You can create your `package.json` file either manually or by running `npm init` and answering the questions that it asks.
 
-The you'll need to add a `bin` entry at the end of it like this:
+Then you'll need to add a `bin` entry at the end of it like this:
 ```
 {
   ...,
